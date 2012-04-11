@@ -1,0 +1,56 @@
+From daa02c588f811e0ea58bf2bd5433eb4e708e6c5d Mon Sep 17 00:00:00 2001
+From: Stacey Sheldon <stac@solidgoldbomb.org>
+Date: Sun, 8 Apr 2012 14:00:59 -0400
+Subject: [PATCH] spidev: enable spidev devices when otherwise unused
+
+Enabling CONFIG_SPI_SPIDEV and disabling the other users of
+a bus exports the unused SPI busses to userspace.
+
+Disabling CONFIG_TOUCHSCREEN_ADS7846 frees up /dev/spidev1.0.
+Disabling CONFIG_PANEL_LGPHILIPS_LB035Q02 frees up /dev/spidev1.1.
+---
+ arch/arm/mach-omap2/board-overo.c |   21 +++++++++++++++++++++
+ 1 files changed, 21 insertions(+), 0 deletions(-)
+
+diff --git a/arch/arm/mach-omap2/board-overo.c b/arch/arm/mach-omap2/board-overo.c
+index 4cf7aea..d776980 100644
+--- a/arch/arm/mach-omap2/board-overo.c
++++ b/arch/arm/mach-omap2/board-overo.c
+@@ -459,6 +459,19 @@ static int __init overo_i2c_init(void)
+ }
+ 
+ static struct spi_board_info overo_spi_board_info[] __initdata = {
++#if defined(CONFIG_TOUCHSCREEN_ADS7846) ||		\
++	defined(CONFIG_TOUCHSCREEN_ADS7846_MODULE)
++	/* Defined above as a regulator */
++#elif defined(CONFIG_SPI_SPIDEV) || defined(CONFIG_SPI_SPIDEV_MODULE)
++	{
++		.modalias		= "spidev",
++		.bus_num		= 1,
++		.chip_select		= 0,
++		.max_speed_hz		= 1000000,
++		.mode			= SPI_MODE_0,
++	},
++#endif
++
+ #if defined(CONFIG_PANEL_LGPHILIPS_LB035Q02) || \
+ 	defined(CONFIG_PANEL_LGPHILIPS_LB035Q02_MODULE)
+ 	{
+@@ -468,6 +481,14 @@ static struct spi_board_info overo_spi_board_info[] __initdata = {
+ 		.max_speed_hz		= 500000,
+ 		.mode			= SPI_MODE_3,
+ 	},
++#elif defined(CONFIG_SPI_SPIDEV) || defined(CONFIG_SPI_SPIDEV_MODULE)
++	{
++		.modalias		= "spidev",
++		.bus_num		= 1,
++		.chip_select		= 1,
++		.max_speed_hz		= 1000000,
++		.mode			= SPI_MODE_0,
++	},
+ #endif
+ };
+ 
+-- 
+1.7.5.4
+

@@ -18,6 +18,7 @@ SRC_URI += " \
 	file://user-config.cfg \
 	file://user-patches.scc \
 	file://defconfig \
+	file://0001-spidev-enable-spidev-devices-when-otherwise-unused.patch \
 	"
 
 # uncomment and replace these SRCREVs with the real commit ids once you've had
