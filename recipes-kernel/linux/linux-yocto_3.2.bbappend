@@ -11,12 +11,14 @@ KBRANCH_op-datalogger  = "standard/default/beagleboard"
 KMACHINE_op-datalogger  = "op-datalogger"
 
 
-SRC_URI += "file://op-datalogger-standard.scc \
-file://op-datalogger.scc \
-file://op-datalogger.cfg \
-            file://user-config.cfg \
-            file://user-patches.scc \
-           "
+SRC_URI += " \
+	file://op-datalogger-standard.scc \
+	file://op-datalogger.scc \
+	file://op-datalogger.cfg \
+	file://user-config.cfg \
+	file://user-patches.scc \
+	file://defconfig \
+	"
 
 # uncomment and replace these SRCREVs with the real commit ids once you've had
 # the appropriate changes committed to the upstream linux-yocto repo
