@@ -14,6 +14,7 @@ KMACHINE_op-datalogger  = "op-datalogger"
 SRC_URI += " \
 	file://op-datalogger-standard.scc \
 	file://op-datalogger.scc \
+	file://op-datalogger.cfg \
 	file://user-config.cfg \
 	file://user-patches.scc \
 	file://defconfig \
@@ -22,6 +23,7 @@ SRC_URI += " \
         file://0004-Enable-overo-camera-support.patch \
 	"
 
+KERNEL_FEATURES_append="op-datalogger-standard.scc"
 
 # uncomment and replace these SRCREVs with the real commit ids once you've had
 # the appropriate changes committed to the upstream linux-yocto repo
