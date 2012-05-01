@@ -25,7 +25,7 @@ LINUX_VERSION ?= "3.4.0"
 SRCREV_machine ?= "c9cc9ce9fe49f12e03ce37df72dd3f714ae0dd45"
 SRCREV_meta ?= "504a1101a93f09fdbc25a919749d3efd2a4a053d"
 
-#SRCREV=${AUTOREV}
+SRCREV="${AUTOREV}"
 
 PR = "r1"
 PV = "${LINUX_VERSION}+git${SRCPV}"
