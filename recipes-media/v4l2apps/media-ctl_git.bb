@@ -1,6 +1,6 @@
 DESCRIPTION = "Media controller control application"
 LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://COPYING.GPL;md5=751419260aa954499f7abaabaa882bbe"
+LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=d749e86a105281d7a44c2328acebc4b0"
 
 
 SRCREV = "${AUTOREV}"
