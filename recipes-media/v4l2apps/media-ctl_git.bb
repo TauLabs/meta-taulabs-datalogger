@@ -3,7 +3,7 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING.GPL;md5=751419260aa954499f7abaabaa882bbe"
 
 
-SRCREV = ${AUTOREV}
+SRCREV = "${AUTOREV}"
 SRC_URI = "git://git.ideasonboard.org/media-ctl.git;protocol=git"
 
 PV = "0.0.2+git${SRCREV}"
