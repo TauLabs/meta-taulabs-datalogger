@@ -1,0 +1,25 @@
+From 995379b4e30b5fbb4c953d83dff1f005e3105eee Mon Sep 17 00:00:00 2001
+From: James Cotton <peabody124@gmail.com>
+Date: Mon, 30 Apr 2012 23:24:40 -0500
+Subject: [PATCH] Fix from https://lkml.org/lkml/2012/4/22/71 for usb
+ compilation breakage
+
+---
+ drivers/mfd/omap-usb-host.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/drivers/mfd/omap-usb-host.c b/drivers/mfd/omap-usb-host.c
+index c8aae66..7e96bb2 100644
+--- a/drivers/mfd/omap-usb-host.c
++++ b/drivers/mfd/omap-usb-host.c
+@@ -25,6 +25,7 @@
+ #include <linux/clk.h>
+ #include <linux/dma-mapping.h>
+ #include <linux/spinlock.h>
++#include <plat/cpu.h>
+ #include <plat/usb.h>
+ #include <linux/pm_runtime.h>
+ 
+-- 
+1.7.5.4
+

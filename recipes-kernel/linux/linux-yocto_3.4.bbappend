@@ -18,6 +18,7 @@ SRC_URI += " \
 	file://user-patches.scc \
 	file://defconfig \
 	file://0001-spidev-enable-spidev-devices-when-otherwise-unused.patch \
+	file://0002-Fix-from-https-lkml.org-lkml-2012-4-22-71-for-usb-co.patch \
 	"
 
 
