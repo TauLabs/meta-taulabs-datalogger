@@ -23,7 +23,7 @@ SRC_URI += " \
         file://0004-Enable-overo-camera-support.patch \
 	"
 
-KERNEL_FEATURES_append="op-datalogger-standard.scc"
+KERNEL_FEATURES_append="op-datalogger-preempt-rt.scc"
 
 # uncomment and replace these SRCREVs with the real commit ids once you've had
 # the appropriate changes committed to the upstream linux-yocto repo
