@@ -15,4 +15,4 @@ inherit autotools
 STAGING_KERNEL_DIR = "${STAGING_DIR}/${MACHINE_ARCH}${TARGET_VENDOR}-${TARGET_OS}/kernel"
 EXTRA_OECONF = "--with-kernel-headers=${STAGING_KERNEL_DIR}"
 
-
+DEPENDS = "virtual/kernel"
