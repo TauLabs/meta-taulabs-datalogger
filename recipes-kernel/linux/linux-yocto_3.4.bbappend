@@ -10,7 +10,7 @@ KBRANCH_op-datalogger  = "standard/beagleboard"
 
 KMACHINE_op-datalogger  = "op-datalogger"
 
-#        file://defconfig \
+
 SRC_URI += " \
 	file://op-datalogger-standard.scc \
 	file://op-datalogger.scc \
@@ -19,11 +19,11 @@ SRC_URI += " \
 	file://op-datalogger-caspa.scc \
 	file://user-config.cfg \
 	file://user-patches.scc \
+        file://defconfig \
 	file://0001-spidev-enable-spidev-devices-when-otherwise-unused.patch \
-	file://0002-Fix-from-https-lkml.org-lkml-2012-4-22-71-for-usb-co.patch \
         file://0004-Enable-overo-camera-support.patch \
 	"
-
+#	file://0002-Fix-from-https-lkml.org-lkml-2012-4-22-71-for-usb-co.patch \
 #KERNEL_FEATURES=" op-datalogger-preempt-rt.scc"
 #KERNEL_FEATURES=" op-datalogger-standard.scc"
 #KERNEL_FEATURES_append=" op-datalogger-caspa.scc"
