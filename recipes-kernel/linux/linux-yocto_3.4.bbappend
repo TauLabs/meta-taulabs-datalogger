@@ -26,7 +26,7 @@ SRC_URI += " \
 #	file://0002-Fix-from-https-lkml.org-lkml-2012-4-22-71-for-usb-co.patch \
 #KERNEL_FEATURES=" op-datalogger-preempt-rt.scc"
 #KERNEL_FEATURES=" op-datalogger-standard.scc"
-#KERNEL_FEATURES_append=" op-datalogger-caspa.scc"
+KERNEL_FEATURES_append=" op-datalogger-caspa.scc"
 
 # uncomment and replace these SRCREVs with the real commit ids once you've had
 # the appropriate changes committed to the upstream linux-yocto repo
