@@ -12,18 +12,13 @@ KMACHINE_op-datalogger  = "op-datalogger"
 
 
 SRC_URI += " \
-	file://op-datalogger-standard.scc \
-	file://op-datalogger.scc \
-	file://op-datalogger.cfg \
-	file://user-config.cfg \
-	file://user-patches.scc \
 	file://defconfig \
 	file://0001-spidev-enable-spidev-devices-when-otherwise-unused.patch \
 	file://0002-Fix-from-https-lkml.org-lkml-2012-4-22-71-for-usb-co.patch \
         file://0004-Enable-overo-camera-support.patch \
 	"
 
-KERNEL_FEATURES_append="op-datalogger-preempt-rt.scc"
+#KERNEL_FEATURES_append="op-datalogger-preempt-rt.scc"
 
 # uncomment and replace these SRCREVs with the real commit ids once you've had
 # the appropriate changes committed to the upstream linux-yocto repo
