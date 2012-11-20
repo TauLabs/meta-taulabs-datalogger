@@ -1,9 +1,9 @@
-DESCRIPTION = "OpenPilot SPI datalink server"
+DESCRIPTION = "Tau Labs SPI datalink server"
 AUTHOR = "James Cotton"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=f27defe1e96c2e1ecd4e0c9be8967949"
 PR = "r1"
-SRC_URI = "git://github.com/peabody124/op_overo.git;protocol=git"
+SRC_URI = "git://github.com/TauLabs/overo-datalogger.git;protocol=git"
 SRCREV = "master"
 
 S = "${WORKDIR}/git"
