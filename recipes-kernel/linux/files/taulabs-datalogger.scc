@@ -1,0 +1,8 @@
+kconf hardware taulabs-datalogger.cfg
+include features/usb-net/usb-net.scc
+
+kconf hardware user-config.cfg
+include user-patches.scc
+
+include taulabs-datalogger-caspa.scc
+include taulabs-datalogger-dsp.scc

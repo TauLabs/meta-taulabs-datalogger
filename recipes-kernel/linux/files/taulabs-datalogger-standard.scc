@@ -1,0 +1,8 @@
+define KMACHINE taulabs-datalogger
+define KTYPE standard
+define KARCH arm
+
+include ktypes/standard
+branch taulabs-datalogger
+
+include taulabs-datalogger.scc

@@ -1,8 +1,0 @@
-define KMACHINE op-datalogger
-define KTYPE standard
-define KARCH arm
-
-include ktypes/standard
-branch op-datalogger
-
-include op-datalogger.scc

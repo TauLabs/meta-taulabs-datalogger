@@ -8,7 +8,7 @@ UBOOT_SYMLINK = "u-boot-${MACHINE}.img"
 PR = "r2"
 PV = "2011.12"
 
-COMPATIBLE_MACHINE = "(overo|op-datalogger)"
+COMPATIBLE_MACHINE = "(overo|taulabs-datalogger)"
 
 SRC_URI = "git://www.denx.de/git/u-boot.git;branch=master;protocol=git \
            file://0001-U-Boot-omap_hsmmc-Wait-for-CMDI-to-be-clear.patch \

@@ -2,23 +2,23 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 PR := "${PR}.2"
 
-COMPATIBLE_MACHINE_op-datalogger = "op-datalogger"
+COMPATIBLE_MACHINE_taulabs-datalogger = "taulabs-datalogger"
 
 
-KBRANCH_op-datalogger  = "standard/beagleboard"
+KBRANCH_taulabs-datalogger  = "standard/beagleboard"
 
 
-KMACHINE_op-datalogger  = "op-datalogger"
+KMACHINE_taulabs-datalogger  = "taulabs-datalogger"
 
 
 SRC_URI += " \
-	file://op-datalogger-standard.scc \
-	file://op-datalogger.scc \
-	file://op-datalogger.cfg \
-	file://op-datalogger-caspa.scc \
-	file://op-datalogger-caspa.cfg \
-	file://op-datalogger-dsp.scc \
-	file://op-datalogger-dsp.cfg \
+	file://taulabs-datalogger-standard.scc \
+	file://taulabs-datalogger.scc \
+	file://taulabs-datalogger.cfg \
+	file://taulabs-datalogger-caspa.scc \
+	file://taulabs-datalogger-caspa.cfg \
+	file://taulabs-datalogger-dsp.scc \
+	file://taulabs-datalogger-dsp.cfg \
 	file://user-config.cfg \
 	file://user-patches.scc \
         file://defconfig \
@@ -28,5 +28,5 @@ SRC_URI += " \
 
 # uncomment and replace these SRCREVs with the real commit ids once you've had
 # the appropriate changes committed to the upstream linux-yocto repo
-#SRCREV_machine_pn-linux-yocto_op-datalogger ?= "85d394ecb685cac55834471dfa4e7c0f30b4ccf3"
-#SRCREV_meta_pn-linux-yocto_op-datalogger ?= "504a1101a93f09fdbc25a919749d3efd2a4a053d"
+#SRCREV_machine_pn-linux-yocto_taulabs-datalogger ?= "85d394ecb685cac55834471dfa4e7c0f30b4ccf3"
+#SRCREV_meta_pn-linux-yocto_taulabs-datalogger ?= "504a1101a93f09fdbc25a919749d3efd2a4a053d"

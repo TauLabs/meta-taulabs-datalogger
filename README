@@ -1,4 +1,4 @@
-This README file contains information on building the meta-op-datalogger
+This README file contains information on building the meta-taulabs-datalogger
 BSP layer, and booting the images contained in the /binary directory.
 Please see the corresponding sections below for details.
 
@@ -34,11 +34,11 @@ Please see the meta-xxxx/MAINTAINERS file for more details.
 Table of Contents
 =================
 
-I. Building the meta-op-datalogger BSP layer
+I. Building the meta-taulabs-datalogger BSP layer
  II. Booting the images in /binary
 
 
-I. Building the meta-op-datalogger BSP layer
+I. Building the meta-taulabs-datalogger BSP layer
 ========================================
 
 --- replace with specific instructions for your layer ---
@@ -49,18 +49,18 @@ Package (BSP) Downloads' page of the Yocto Project website.
 
 Having done that, and assuming you extracted the BSP tarball contents
 at the top-level of your yocto build tree, you can build a
-op-datalogger image by adding the location of the meta-op-datalogger
+taulabs-datalogger image by adding the location of the meta-taulabs-datalogger
 layer to bblayers.conf, along with any other layers needed (to access
 common metadata shared between BSPs) e.g.:
 
   yocto/meta-xxxx \
-yocto/meta-xxxx/meta-op-datalogger \
+yocto/meta-xxxx/meta-taulabs-datalogger \
 
-To enable the op-datalogger layer, add the op-datalogger MACHINE to local.conf:
+To enable the taulabs-datalogger layer, add the taulabs-datalogger MACHINE to local.conf:
 
-MACHINE ?= "op-datalogger"
+MACHINE ?= "taulabs-datalogger"
 
-You should then be able to build a op-datalogger image as such:
+You should then be able to build a taulabs-datalogger image as such:
 
   $ source oe-init-build-env
   $ bitbake core-image-sato
@@ -92,7 +92,7 @@ Under Linux, insert a USB flash drive.  Assuming the USB flash drive
 takes device /dev/sdf, use dd to copy the live image to it.  For
 example:
 
-# dd if=core-image-sato-op-datalogger-20101207053738.hddimg of=/dev/sdf
+# dd if=core-image-sato-taulabs-datalogger-20101207053738.hddimg of=/dev/sdf
 # sync
 # eject /dev/sdf
 
