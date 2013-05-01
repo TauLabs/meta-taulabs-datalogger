@@ -1,0 +1,3 @@
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
+
+taulabs ALL=(ALL) ALL
