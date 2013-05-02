@@ -1,0 +1,11 @@
+# taulabs-datalogger:~$ udevadm info --query=all --name=media0    
+# P: /devices/platform/omap3isp/media0
+# N: media0
+# E: DEVNAME=/dev/media0
+# E: DEVPATH=/devices/platform/omap3isp/media0
+# E: MAJOR=253
+# E: MINOR=0
+# E: SUBSYSTEM=media
+
+KERNEL=="media*", SUBSYSTEM=="media", MODE="0666"
+
