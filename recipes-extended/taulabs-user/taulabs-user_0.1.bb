@@ -12,7 +12,7 @@ S = "${WORKDIR}"
 # Default password is "taulabs" and was created with 'mkpasswd taulabs 00'
 inherit useradd
 USERADD_PACKAGES = "${PN}"
-USERADD_PARAM_${PN} = "--create-home --shell /bin/bash --user-group --groups sudo --password 00.S.cmg9hqBk taulabs"
+USERADD_PARAM_${PN} = "--create-home --shell /bin/bash --user-group --groups sudo,video --password 00.S.cmg9hqBk taulabs"
 
 do_install() {
 	     # Install files into the taulabs home directory
