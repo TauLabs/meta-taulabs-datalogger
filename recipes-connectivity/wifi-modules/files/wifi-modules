@@ -1,0 +1,28 @@
+#! /bin/sh
+set -e
+
+# /etc/init.d/wifi-modules: install wifi modules for overo
+
+install_modules() {
+	module_path="/lib/modules/$(uname -r)/kernel/drivers/net/wireless/libertas"
+	modules="libertas.ko libertas_sdio.ko"
+	for mod in $modules; do
+		insmod "${module_path}/${mod}" || exit 1
+	done
+}
+
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
+
+case "$1" in
+	start)
+		echo "Installing libertas wifi modules"
+		install_modules
+		;;
+	stop)
+		;;
+	*)
+		echo "Usage: /etc/init.d/wifi-modules {start}"
+		exit 1
+esac
+
+exit 0
