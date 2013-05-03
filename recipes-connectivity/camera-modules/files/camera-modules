@@ -1,0 +1,28 @@
+#! /bin/sh
+set -e
+
+# /etc/init.d/camera-modules: install camera interface modules for overo
+
+install_modules() {
+	module_path="/lib/modules/$(uname -r)/kernel/drivers/media/video/"
+	modules="mt9v032.ko omap3isp/omap3-isp.ko"
+	for mod in $modules; do
+		insmod "${module_path}/${mod}" || exit 1
+	done
+}
+
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
+
+case "$1" in
+	start)
+		echo "Installing camera interface modules"
+		install_modules
+		;;
+	stop)
+		;;
+	*)
+		echo "Usage: /etc/init.d/camera-modules {start}"
+		exit 1
+esac
+
+exit 0
